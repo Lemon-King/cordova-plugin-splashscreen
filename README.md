@@ -273,6 +273,16 @@ __Note__: SplashScreens size for Windows 10 project should not exceed 200 KBytes
 __Note__: Supported formats are `.png`, `.jpg`, `.jpeg`. Mixing of the extensions within a target is not supported. I.e. you can have `splashscreen.jpg` and `splashscreenphone.png` but not `splashscreen.scale-100.png`, `splashscreen.scale-400.jpg`.  
 __Note__: You may need to reopen Visual Studio solution after changing the images and doing a `cordova prepare` for the changes to take effect.
 
+##### Video launch screen
+
+Video should be located in www for cordova to correctly bundle your launch video.
+
+Specify your path in `config.xml` as:
+
+```xml
+<preference name="SplashScreenVideoPath" value="path/video.mp4" />
+```
+
 ## Example Configuration
 In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
 
